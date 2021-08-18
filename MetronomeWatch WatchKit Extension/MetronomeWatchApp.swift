@@ -13,6 +13,7 @@ struct MetronomeWatchApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
+//                MetronomeView()
             }
         }
 
