@@ -25,9 +25,12 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .padding(40)
                     .font(.title)
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .top, endPoint: .bottom)
+                    )
             }
+            
             .clipShape(Circle())
-            .buttonStyle(BorderedButtonStyle(tint: .blue.opacity(100)))
             .animation(.easeInOut)
             .scaleEffect(CGSize(width: scale, height: scale), anchor: .center)
             
