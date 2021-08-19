@@ -10,6 +10,7 @@ import WatchKit
 
 struct ContentView: View {
     
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var bpm: Double = 10
     @State var isChanged: Bool = false
     @State var isEditing: Bool = true
@@ -21,34 +22,28 @@ struct ContentView: View {
                 self.isEditing.toggle()
             }) {
                 Text("\(bpm, specifier: "%.0f")")
-                    .digitalCrownRotation($bpm, from: 10, through: 300, by: 1, sensitivity: .medium, isContinuous: false, isHapticFeedbackEnabled: true)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.regular)
+                    .digitalCrownRotation($bpm, from: 10, through: 300, by: 1, sensitivity: .high, isContinuous: false, isHapticFeedbackEnabled: true)
                     .foregroundColor(.white)
                     .padding(40)
-                    .font(.title)
-                    .background(
-                        LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .top, endPoint: .bottom)
-                    )
+                    
             }
-            
             .clipShape(Circle())
-            .animation(.easeInOut)
+            .buttonStyle(BorderedButtonStyle(tint: .blue.opacity(100)))
             .scaleEffect(CGSize(width: scale, height: scale), anchor: .center)
+            .animation(.easeInOut)
             
             Spacer(minLength: 20)
             
             if isEditing == true {
-//                Text("Use crown to set BPM")
-//                    .font(.caption2)
-//                    .animation(/*@START_MENU_TOKEN@*/.easeInOut/*@END_MENU_TOKEN@*/)
-//                ZStack{
                     Slider(
                         value: $bpm,
                         in: 10...300,
                         step: 1
                     )
+                    .accentColor(.clear)
                     .padding(.horizontal, 10)
-//                }
-                    
             }
                 
         }
@@ -57,9 +52,10 @@ struct ContentView: View {
         })
         .onChange(of: isChanged, perform: { value in
             if value == true {
-                scale = 0.8
-             
-                self.isChanged.toggle()
+                scale = 0.9
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    self.isChanged.toggle()
+                }
             } else {
                 scale = 1.0
             }
