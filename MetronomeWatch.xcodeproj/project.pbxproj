@@ -164,9 +164,10 @@
 		DE1D327426CABE490003B4B4 /* MetronomeWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DE9940FA26CE350E00A12D90 /* Model */,
+				DE9940FB26CE351B00A12D90 /* View Model */,
+				DE9940FC26CE352A00A12D90 /* View */,
 				DE1D327526CABE490003B4B4 /* MetronomeWatchApp.swift */,
-				DEFC84D726CCF9FD0089A18F /* MetronomeView.swift */,
-				DE1D327726CABE490003B4B4 /* ContentView.swift */,
 				DE1D327926CABE490003B4B4 /* NotificationController.swift */,
 				DE1D327B26CABE490003B4B4 /* NotificationView.swift */,
 				DE1D327D26CABE490003B4B4 /* ComplicationController.swift */,
@@ -203,6 +204,29 @@
 				DE1D329B26CABE4A0003B4B4 /* Info.plist */,
 			);
 			path = MetronomeWatchUITests;
+			sourceTree = "<group>";
+		};
+		DE9940FA26CE350E00A12D90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE9940FB26CE351B00A12D90 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		DE9940FC26CE352A00A12D90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEFC84D726CCF9FD0089A18F /* MetronomeView.swift */,
+				DE1D327726CABE490003B4B4 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
