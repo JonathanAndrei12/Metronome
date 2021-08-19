@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import WatchKit
+//import CoreHaptics
 //import Combine
 
 class MetronomeViewModel: ObservableObject {
@@ -21,6 +23,9 @@ class MetronomeViewModel: ObservableObject {
                 print(self.metro.beep)
                 self.metro.objectWillChange.send()
                 self.objectWillChange.send()
+                
+                WKInterfaceDevice.current().play(.click)
+                
             }
 //        }
 //        self.timer.connect().cancel()
