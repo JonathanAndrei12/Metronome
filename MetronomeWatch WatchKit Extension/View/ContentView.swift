@@ -1,45 +1,40 @@
 //
-//  MetronomeView.swift
+//  ContentView.swift
 //  MetronomeWatch WatchKit Extension
 //
-//  Created by Jonathan Andrei on 18/08/21.
+//  Created by Jonathan Andrei on 16/08/21.
 //
 
 import SwiftUI
+import WatchKit
 
-struct MetronomeView: View {
-    
+struct ContentView: View {
+
     @StateObject var metroVM: MetronomeViewModel = MetronomeViewModel()
-//    @StateObject var metro: Metronome = Metronome()
     
-    @State var bpm: Double = 10
-    @State var isChanged: Bool = false
+    @State var color: Color = .blue
     @State var isEditing: Bool = true
     @State var scale: CGFloat = 1.0
-    
-//    init(){
-//        self.metroVM.stopTimer()
-//    }
+    @State var focus: Bool = true
     
     var body: some View {
         VStack(alignment: .center){
             Button(action: {
-                
                 self.isEditing.toggle()
-                
                 if isEditing == false { //Metronome Played
-                    metroVM.timerConfig()
+                    self.focus = false
+                    self.metroVM.timerConfig()
                 } else {
-                    metroVM.stopTimer()
+                    self.focus = true
+                    self.metroVM.stopTimer()
                 }
-                
             }) {
                 VStack {
                     Text("\(self.metroVM.metro.beatsPerMinute, specifier: "%.0f")")
                         .font(.title)
                         .fontWeight(.regular)
-                        .focusable(true)
-                        .digitalCrownRotation(self.$metroVM.metro.beatsPerMinute, from: 10, through: 300, by: 1, sensitivity: .high, isContinuous: false, isHapticFeedbackEnabled: true)
+                        .focusable(focus)
+                        .digitalCrownRotation(self.$metroVM.metro.beatsPerMinute, from: 10, through: 300, by: 1, sensitivity: .medium, isContinuous: false, isHapticFeedbackEnabled: true)
                         .foregroundColor(.white)
                     
                     Text("BPM")
@@ -50,12 +45,11 @@ struct MetronomeView: View {
                 .padding(35)
             }
             .clipShape(Circle())
-            .buttonStyle(BorderedButtonStyle(tint: .blue.opacity(100)))
+            .buttonStyle(BorderedButtonStyle(tint: color.opacity(100)))
             .scaleEffect(CGSize(width: scale, height: scale), anchor: .center)
             .animation(.easeInOut)
             
-            Spacer(minLength: 10
-            )
+            Spacer(minLength: 10)
 
             if isEditing == true {
                 Text("Use crown to change BPM")
@@ -65,23 +59,32 @@ struct MetronomeView: View {
                 
         }
         .onChange(of: self.metroVM.metro.beatsPerMinute, perform: { value in
-            isChanged = true
+            self.metroVM.metro.isBPMChanged = true
         })
-        .onChange(of: isChanged, perform: { value in
+        .onChange(of: self.metroVM.metro.isBPMChanged, perform: { value in
             if value == true {
                 scale = 0.9
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    self.isChanged.toggle()
+                    self.metroVM.metro.isBPMChanged.toggle()
                 }
             } else {
                 scale = 1.0
             }
         })
+        .onChange(of: self.metroVM.metro.beep) { value in
+            if value == true {
+                scale = 0.9
+                color = .red
+            } else {
+                scale = 1.0
+                color = .blue
+            }
+        }
     }
 }
 
-struct MetronomeView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MetronomeView()
+        ContentView()
     }
 }
