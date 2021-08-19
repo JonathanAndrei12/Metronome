@@ -23,9 +23,10 @@ struct MetronomeView: View {
                         .font(.title)
                         .foregroundColor(.white)
                         .padding(40)
+                        
                 }
                 .clipShape(Circle())
-                .buttonStyle(BorderedButtonStyle(tint: .blue.opacity(100)))
+//                .buttonStyle(GradientButtonStyle())
                 .animation(.easeInOut)
                 
     //            Text("\(BPM, specifier: "%.0f")")
@@ -37,6 +38,15 @@ struct MetronomeView: View {
         }
     }
 }
+//struct GradientButtonStyle: ButtonStyle {
+//    func makeBody(configuration: Self.Configuration) -> some View {
+//        configuration.label
+//            .foregroundColor(Color.white)
+//            .padding()
+//            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .top, endPoint: .bottom))
+//            .cornerRadius(15.0)
+//    }
+//}
 
 struct MetronomeView_Previews: PreviewProvider {
     static var previews: some View {

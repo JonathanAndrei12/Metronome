@@ -27,7 +27,6 @@ struct ContentView: View {
                     .digitalCrownRotation($bpm, from: 10, through: 300, by: 1, sensitivity: .high, isContinuous: false, isHapticFeedbackEnabled: true)
                     .foregroundColor(.white)
                     .padding(40)
-                    
             }
             .clipShape(Circle())
             .buttonStyle(BorderedButtonStyle(tint: .blue.opacity(100)))
@@ -62,6 +61,16 @@ struct ContentView: View {
         })
     }
 }
+
+//struct GradientButtonStyle: ButtonStyle {
+//    func makeBody(configuration: Self.Configuration) -> some View {
+//        configuration.label
+//            .foregroundColor(Color.white)
+//            .padding()
+//            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .top, endPoint: .bottom))
+//            .cornerRadius(15.0)
+//    }
+//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
