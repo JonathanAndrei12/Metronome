@@ -211,6 +211,7 @@
 		DE9940FA26CE350E00A12D90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6917577926CE4535001868FF /* BeatIseng.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,7 +228,6 @@
 			children = (
 				DEFC84D726CCF9FD0089A18F /* MetronomeView.swift */,
 				DE1D327726CABE490003B4B4 /* ContentView.swift */,
-				6917577926CE4535001868FF /* BeatIseng.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
