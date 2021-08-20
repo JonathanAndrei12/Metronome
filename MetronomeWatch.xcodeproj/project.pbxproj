@@ -19,6 +19,7 @@
 		DE1D328326CABE4A0003B4B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1D328226CABE4A0003B4B4 /* Preview Assets.xcassets */; };
 		DE1D328F26CABE4A0003B4B4 /* MetronomeWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D328E26CABE4A0003B4B4 /* MetronomeWatchTests.swift */; };
 		DE1D329A26CABE4A0003B4B4 /* MetronomeWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D329926CABE4A0003B4B4 /* MetronomeWatchUITests.swift */; };
+		DE6EDCB526CFBFC300FAC648 /* WKExtentionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6EDCB426CFBFC300FAC648 /* WKExtentionDelegate.swift */; };
 		DE9940FE26CE376700A12D90 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9940FD26CE376700A12D90 /* Metronome.swift */; };
 		DE99410026CE3BEF00A12D90 /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9940FF26CE3BEF00A12D90 /* MetronomeViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		DE1D329526CABE4A0003B4B4 /* MetronomeWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1D329926CABE4A0003B4B4 /* MetronomeWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeWatchUITests.swift; sourceTree = "<group>"; };
 		DE1D329B26CABE4A0003B4B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6EDCB426CFBFC300FAC648 /* WKExtentionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKExtentionDelegate.swift; sourceTree = "<group>"; };
 		DE9940FD26CE376700A12D90 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		DE9940FF26CE3BEF00A12D90 /* MetronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 				DE1D328426CABE4A0003B4B4 /* Info.plist */,
 				DE1D328526CABE4A0003B4B4 /* PushNotificationPayload.apns */,
 				DE1D328126CABE4A0003B4B4 /* Preview Content */,
+				DE6EDCB426CFBFC300FAC648 /* WKExtentionDelegate.swift */,
 			);
 			path = "MetronomeWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				DE1D327E26CABE490003B4B4 /* ComplicationController.swift in Sources */,
 				DE1D327626CABE490003B4B4 /* MetronomeWatchApp.swift in Sources */,
 				DE1D327C26CABE490003B4B4 /* NotificationView.swift in Sources */,
+				DE6EDCB526CFBFC300FAC648 /* WKExtentionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
