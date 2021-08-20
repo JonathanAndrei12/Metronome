@@ -26,6 +26,7 @@ struct ContentView: View {
                     self.metroVM.timerConfig()
                 } else {
                     self.focus = true
+                    self.color = .blue
                     self.metroVM.stopTimer()
                 }
             }) {
