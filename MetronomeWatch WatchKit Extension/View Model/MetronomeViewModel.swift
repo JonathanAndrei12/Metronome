@@ -23,7 +23,6 @@ class MetronomeViewModel: ObservableObject {
         self.metro.timer = Timer.scheduledTimer(withTimeInterval: self.metro.timeInterval, repeats: true) { timer in
             
             self.metro.beep.toggle()
-            print("keluar")
             print(self.metro.beep)
             self.metro.objectWillChange.send()
             self.objectWillChange.send()
