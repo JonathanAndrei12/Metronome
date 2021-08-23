@@ -599,7 +599,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aza.MetronomeWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -623,7 +623,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aza.MetronomeWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -643,7 +643,7 @@
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				IBSC_MODULE = MetronomeWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "MetronomeWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aza.MetronomeWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -663,7 +663,7 @@
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				IBSC_MODULE = MetronomeWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "MetronomeWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aza.MetronomeWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -681,7 +681,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aza.MetronomeWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch;
 				PRODUCT_NAME = MetroWatch;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -696,7 +696,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aza.MetronomeWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch;
 				PRODUCT_NAME = MetroWatch;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -752,6 +752,7 @@
 		DE1D32AD26CABE4A0003B4B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				INFOPLIST_FILE = MetronomeWatchUITests/Info.plist;
@@ -762,6 +763,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -773,6 +775,7 @@
 		DE1D32AE26CABE4A0003B4B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				INFOPLIST_FILE = MetronomeWatchUITests/Info.plist;
@@ -783,6 +786,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
