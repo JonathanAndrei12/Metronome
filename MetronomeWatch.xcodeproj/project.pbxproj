@@ -19,10 +19,9 @@
 		DE1D328326CABE4A0003B4B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1D328226CABE4A0003B4B4 /* Preview Assets.xcassets */; };
 		DE1D328F26CABE4A0003B4B4 /* MetronomeWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D328E26CABE4A0003B4B4 /* MetronomeWatchTests.swift */; };
 		DE1D329A26CABE4A0003B4B4 /* MetronomeWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1D329926CABE4A0003B4B4 /* MetronomeWatchUITests.swift */; };
+		DE6EDCB526CFBFC300FAC648 /* WKExtentionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6EDCB426CFBFC300FAC648 /* WKExtentionDelegate.swift */; };
 		DE9940FE26CE376700A12D90 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9940FD26CE376700A12D90 /* Metronome.swift */; };
 		DE99410026CE3BEF00A12D90 /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9940FF26CE3BEF00A12D90 /* MetronomeViewModel.swift */; };
-		DEFC84D826CCF9FD0089A18F /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC84D726CCF9FD0089A18F /* MetronomeView.swift */; };
-		DEFC84DA26CCFD330089A18F /* HidingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC84D926CCFD330089A18F /* HidingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DE1D326026CABE480003B4B4 /* MetronomeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetronomeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1D326026CABE480003B4B4 /* MetroWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1D326426CABE480003B4B4 /* MetronomeWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MetronomeWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1D326926CABE490003B4B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE1D326B26CABE490003B4B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,10 +101,9 @@
 		DE1D329526CABE4A0003B4B4 /* MetronomeWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1D329926CABE4A0003B4B4 /* MetronomeWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeWatchUITests.swift; sourceTree = "<group>"; };
 		DE1D329B26CABE4A0003B4B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6EDCB426CFBFC300FAC648 /* WKExtentionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKExtentionDelegate.swift; sourceTree = "<group>"; };
 		DE9940FD26CE376700A12D90 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		DE9940FF26CE3BEF00A12D90 /* MetronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewModel.swift; sourceTree = "<group>"; };
-		DEFC84D726CCF9FD0089A18F /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeView.swift; sourceTree = "<group>"; };
-		DEFC84D926CCFD330089A18F /* HidingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +145,7 @@
 		DE1D326126CABE480003B4B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE1D326026CABE480003B4B4 /* MetronomeWatch.app */,
+				DE1D326026CABE480003B4B4 /* MetroWatch.app */,
 				DE1D326426CABE480003B4B4 /* MetronomeWatch WatchKit App.app */,
 				DE1D327026CABE490003B4B4 /* MetronomeWatch WatchKit Extension.appex */,
 				DE1D328A26CABE4A0003B4B4 /* MetronomeWatchTests.xctest */,
@@ -179,8 +177,7 @@
 				DE1D328426CABE4A0003B4B4 /* Info.plist */,
 				DE1D328526CABE4A0003B4B4 /* PushNotificationPayload.apns */,
 				DE1D328126CABE4A0003B4B4 /* Preview Content */,
-				DEFC84D926CCFD330089A18F /* HidingView.swift */,
-				DEFC84D726CCF9FD0089A18F /* MetronomeView.swift */,
+				DE6EDCB426CFBFC300FAC648 /* WKExtentionDelegate.swift */,
 			);
 			path = "MetronomeWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -252,7 +249,7 @@
 			);
 			name = MetronomeWatch;
 			productName = MetronomeWatch;
-			productReference = DE1D326026CABE480003B4B4 /* MetronomeWatch.app */;
+			productReference = DE1D326026CABE480003B4B4 /* MetroWatch.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		DE1D326326CABE480003B4B4 /* MetronomeWatch WatchKit App */ = {
@@ -426,10 +423,9 @@
 				DE1D327A26CABE490003B4B4 /* NotificationController.swift in Sources */,
 				DE1D327826CABE490003B4B4 /* ContentView.swift in Sources */,
 				DE1D327E26CABE490003B4B4 /* ComplicationController.swift in Sources */,
-				DEFC84DA26CCFD330089A18F /* HidingView.swift in Sources */,
-				DEFC84D826CCF9FD0089A18F /* MetronomeView.swift in Sources */,
 				DE1D327626CABE490003B4B4 /* MetronomeWatchApp.swift in Sources */,
 				DE1D327C26CABE490003B4B4 /* NotificationView.swift in Sources */,
+				DE6EDCB526CFBFC300FAC648 /* WKExtentionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,12 +676,14 @@
 		DE1D32A726CABE4A0003B4B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MetroWatch;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -693,12 +691,14 @@
 		DE1D32A826CABE4A0003B4B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MetroWatch;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -752,6 +752,7 @@
 		DE1D32AD26CABE4A0003B4B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				INFOPLIST_FILE = MetronomeWatchUITests/Info.plist;
@@ -762,6 +763,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -773,6 +775,7 @@
 		DE1D32AE26CABE4A0003B4B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYCHZK7XK5;
 				INFOPLIST_FILE = MetronomeWatchUITests/Info.plist;
@@ -783,6 +786,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AZA.MetronomeWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;

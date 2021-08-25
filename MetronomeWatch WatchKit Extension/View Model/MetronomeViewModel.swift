@@ -6,40 +6,48 @@
 //
 
 import Foundation
+import WatchKit
+//import CoreHaptics
 //import Combine
 
 class MetronomeViewModel: ObservableObject {
     
     @Published var metro: Metronome = Metronome()//Calling metronome model
+    @Published var session: WKExtendedRuntimeSession?
 
     func timerConfig() { //Configuring timer
-//        DispatchQueue.main.async {
-            self.metro.timer?.invalidate()
-            self.metro.timer = Timer.scheduledTimer(withTimeInterval: self.metro.timeInterval, repeats: true) { timer in
-                self.metro.beep.toggle()
-                print("keluar")
-                print(self.metro.beep)
-                self.metro.objectWillChange.send()
-                self.objectWillChange.send()
-            }
-//        }
-//        self.timer.connect().cancel()
-//        self.timer = Timer.publish(every: metro.timeInterval, on: .main, in: .common).autoconnect()
+        
+        startSession()
+        
+        self.metro.timer?.invalidate()
+        self.metro.timer = Timer.scheduledTimer(withTimeInterval: self.metro.timeInterval, repeats: true) { timer in
+            
+            self.metro.beep.toggle()
+            print(self.metro.beep)
+            self.metro.objectWillChange.send()
+            self.objectWillChange.send()
+            
+            WKInterfaceDevice.current().play(.click)//Playing haptic on beat
+                
+        }
+        
     }
 
-    func stopTimer() {
+    func stopTimer() {//Stop timer
+        
+        endSession()
+        
         self.metro.timer?.invalidate()
         print("Timer Stop")
     }
     
-//    func timerConfig(isPlayed: Bool) {
-//        while isPlayed == true {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + metro.timeInterval) {
-//                self.metro.beep = true
-//            }
-//        } else {
-//            self.metro.beep = fals
-//        }
-//    }
+    func startSession() {//To make metronome working on background
+        session = WKExtendedRuntimeSession()
+        session?.start()
+    }
+    
+    func endSession() {//To end background session
+        session?.invalidate()
+    }
 
 }
